@@ -73,6 +73,8 @@ jobs:
           # 例如:
 
           cat >> .config <<EOF
+          CONFIG_TARGET_KERNEL_PARTSIZE=120
+          CONFIG_TARGET_ROOTFS_PARTSIZE=10000
           CONFIG_TARGET_IMAGES_GZIP=y
           CONFIG_KERNEL_BUILD_USER="OpenWrt-CI"
           CONFIG_KERNEL_BUILD_DOMAIN="Azure"
@@ -86,6 +88,8 @@ jobs:
           CONFIG_PACKAGE_luci-app-qbittorrent
           CONFIG_PACKAGE_luci-app-samba
           CONFIG_PACKAGE_luci-app-ssr-plus
+          CONFIG_PACKAGE_luci-app-passwall
+          CONFIG_PACKAGE_luci-app-filebrowser
           EOF
 
           #
